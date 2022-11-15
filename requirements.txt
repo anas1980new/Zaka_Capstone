@@ -58,7 +58,6 @@ mypy-extensions==0.4.3
 navigator-updater==0.3.0
 
 netifaces==0.11.0
-networkx @ file:///C:/ci/networkx_1657716998256/work
 notebook 
 numba 
 numexpr 
@@ -79,7 +78,6 @@ pydeck==0.8.0
 PyDispatcher==2.0.5
 pyee==9.0.4
 
-PyJWT @ file:///C:/ci/pyjwt_1657511236979/work
 pylibsrtp==0.7.1
 pyls-spyder==0.4.0
 Pympler==1.0.1
