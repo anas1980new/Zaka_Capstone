@@ -1,4 +1,4 @@
-!pip install -r requirments2.txt
+pip3 install -r requirments2.txt
 
 from requests import delete
 import streamlit as st
