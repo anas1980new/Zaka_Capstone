@@ -27,8 +27,10 @@ st.title('Helmet Detection App')
 #Model input -----------------------------------------------------------------------------------classes_to_filter = None  #You can give list of classes to filter by name, Be happy you don't have to put class number. ['train','person' ]
 classes = ['head', 'helmet']
 
+!wget https://github.com/anas1980new/Zaka_Capstone/releases/download/lfs/best.pt 
+
 opt  = {
-    "weights": "runs/train/yolov7x-Final6/weights/best.pt", # Path to weights file default weights are for nano model
+    "weights": "best.pt", # Path to weights file default weights are for nano model
     "yaml"   : "data/custom_data.yaml",
     "img-size": 640, # default image size
     "conf-thres": 0.7, # confidence threshold for inference.
