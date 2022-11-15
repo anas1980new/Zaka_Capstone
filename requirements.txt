@@ -11,14 +11,9 @@ bkcharts==0.2
 blinker==1.5
 brotlipy==0.7.0
 cachetools==5.2.0
-clyent==1.2.2
 commonmark==0.9.1
 comtypes==1.1.10
-conda==22.9.0
-conda-build==3.22.0
-conda-repo-cli==1.0.20
-conda-verify==3.4.2
-constantly==15.1.0
+
 
 cssselect==1.1.0
 
