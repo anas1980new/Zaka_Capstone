@@ -27,7 +27,10 @@ st.title('Helmet Detection App')
 #Model input -----------------------------------------------------------------------------------classes_to_filter = None  #You can give list of classes to filter by name, Be happy you don't have to put class number. ['train','person' ]
 classes = ['head', 'helmet']
 
-pyhthon wget https://github.com/anas1980new/Zaka_Capstone/releases/download/lfs/best.pt 
+
+URL = "https://github.com/anas1980new/Zaka_Capstone/releases/download/lfs/best.pt" # Downloading Model weights
+response = requests.get(URL)
+open("best.pt", "wb").write(response.content)
 
 opt  = {
     "weights": "best.pt", # Path to weights file default weights are for nano model
