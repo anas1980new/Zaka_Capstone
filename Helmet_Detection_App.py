@@ -201,25 +201,6 @@ st.sidebar.subheader('paramaters')
 
 
 @st.cache()
-def image_resize(image, width=None, height=None, inter =cv2.INTER_AREA):
-    dim =None
-    (h,w) =image.shape[:2]
-
-    if width is None & height is None:
-        return image
-
-    if width is None:
-        r=width/float(w)
-        dim = (int(w*r), height)
-
-    else:
-        r=width/float(w)
-        dim = (width, int(h*r))
-
-
-    #Resize the image
-    resized = cv2.resize(image, dim , interpolation=inter)
-    return(resized)
 
 app_mode = st.sidebar.selectbox('Test Me ! 👀 :) ',['Detect an Image', 'Detect a video', 'Detect on webcam','About App'])
 
@@ -287,7 +268,7 @@ elif app_mode == 'Detect an Image':
 
     img_file_buffer = st.sidebar.file_uploader("Upload an Image", type=["JPG", "jpeg", "png"])
     if img_file_buffer is not None:
-        resized = cv2.resize(cv2.imread(img_file_buffer), (640,640), interpolation = cv2.INTER_AREA)
+        resized = cv2.resize(img_file_buffer, (640,640), interpolation= cv2.INTER_AREA)
         image = np.array(Image.open(resized))
         feedback1="Uploaded Image: "
         st.sidebar.image(image)
