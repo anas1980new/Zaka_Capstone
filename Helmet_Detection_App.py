@@ -35,7 +35,7 @@ opt  = {
     "img-size": 640, # default image size
     "conf-thres": 0.7, # confidence threshold for inference.
     "iou-thres" : 0.45, # NMS IoU threshold for inference.
-    "device" : 'cpu',  # device to run our model i.e. 0 or 0,1,2,3 or cpu
+    "device" : '0',  # device to run our model i.e. 0 or 0,1,2,3 or cpu
     "classes" : None  # list of classes to filter or None
 
 }
