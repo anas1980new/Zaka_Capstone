@@ -1,6 +1,7 @@
 
 
-from requests import delete
+from requests import delete, get
+import requests
 import streamlit as st
 import numpy as np
 import cv2
@@ -161,7 +162,7 @@ def detectit(frame):
         for *xyxy, conf, cls in reversed(det):
 
           label = f'{names[int(cls)]} {conf:.2f}'
-          plot_one_box(xyxy, img0, label=label, color=colors[int(cls)], line_thickness=3)
+          plot_one_box(xyxy, img0, label=label, color=colors[int(cls)], line_thickness=2)
   
   return(frame)
 
