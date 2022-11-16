@@ -200,7 +200,6 @@ st.sidebar.title('Helmet Detection Sidebar')
 st.sidebar.subheader('paramaters')
 
 
-@st.cache()
 
 app_mode = st.sidebar.selectbox('Test Me ! 👀 :) ',['Detect an Image', 'Detect a video', 'Detect on webcam','About App'])
 
