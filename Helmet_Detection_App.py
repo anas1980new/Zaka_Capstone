@@ -265,9 +265,10 @@ elif app_mode == 'Detect an Image':
     
     image = None 
 
-    img_file_buffer = st.sidebar.file_uploader("Upload an Image", type=["JPG", "jpeg", "png"])
-    if img_file_buffer is not None:
-        resized = img_file_buffer.resize((640,640))
+    file_buffer = st.sidebar.file_uploader("Upload an Image", type=["JPG", "jpeg", "png"])
+    if file_buffer is not None:
+        img_file_buffer = st.image(img_file_buffer)
+        resized = cv2.resize(img_file_buffer, (640,640), interpolation = cv2.INTER_NEAREST)
         image = np.array(Image.open(resized))
         feedback1="Uploaded Image: "
         st.sidebar.image(image)
