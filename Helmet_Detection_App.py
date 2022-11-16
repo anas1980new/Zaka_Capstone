@@ -15,10 +15,6 @@ from streamlit_webrtc import webrtc_streamer
 
 
 
-
-
-
-
 DEMO_IMAGE = 'demo.jpg'
 DEMO_VIDEO = 'demo.mp4'
 
